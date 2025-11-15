@@ -38,10 +38,10 @@ PythonやExcelでのデータ分析
 - ✅ **Raspberry Pi Pico 2W 本体**（ピンヘッダ付き推奨）
   - ※技適取得済み製品を選んでください
   - 推奨購入先: KSY、スイッチサイエンス（日本正規代理店）
-  - [スイッチサイエンス（Raspberry Pi Pico 2W ピンヘッダ付き）](https://www.switch-science.com/products/9917)
+  - [スイッチサイエンス（Raspberry Pi Pico 2W ピンヘッダ付き）](https://www.switch-science.com/products/10258)
 
 - ✅ **Groveスターターキット（Raspberry Pi Pico用）**（推奨）
-  - [スイッチサイエンス（Groveスターターキット Raspberry Pi Pico用）](https://www.switch-science.com/products/7248)
+  - [スイッチサイエンス（Groveスターターキット Raspberry Pi Pico用）](https://www.switch-science.com/products/7103)
 
 - ✅ **USB A-micro Bケーブル**（データ通信対応）
   - [USB A - USB micro Bケーブル Amazonベーシック 0.9m](https://amzn.to/4qPY5Pi)
@@ -73,21 +73,9 @@ PythonやExcelでのデータ分析
 
 - [Raspberry Pi公式](https://www.raspberrypi.com/)
 - [スイッチサイエンス](https://www.switch-science.com/)
-- [KSY](https://www.ksyic.com/)
+- [KSY](https://raspberry-pi.ksyic.com/)
 
-## 📺 次回予告
-
-**第2回：開発環境セットアップ＆Lチカ**
-
-いよいよPico 2Wに命を吹き込みます！
-
-- ✅ Thonny IDEのインストール
-- ✅ MicroPythonのセットアップ
-- ✅ Lチカの実行（電子工作の第一歩！）
-
-次回までに、Pico 2W本体とUSBケーブルを準備しておいてくださいね。
 
 ---
 
-このシリーズが役に立ったと思ったら、ぜひチャンネル登録と高評価をお願いします！
 一緒に学んで、楽しんでいきましょう！
