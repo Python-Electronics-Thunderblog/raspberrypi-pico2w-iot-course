@@ -1,112 +1,93 @@
-# Raspberry Pi Pico 2W で始めるIoT電子工作入門
+# Raspberry Pi Pico 2W IoT電子工作講座
 
-このリポジトリは、Raspberry Pi Pico 2Wを使ったIoT電子工作入門講座のサンプルコードと学習資料を提供します。
+このシリーズでは、Raspberry Pi Pico 2Wを使ったIoT電子工作を、基礎から実践まで段階的に学んでいきます。
+動画で説明できなかった内容はブログでも解説しています。
 
-## 📚 講座の概要
+📺 **YouTube動画シリーズ**: [こちらから視聴](https://www.youtube.com/@Python-Electronics-Thunderblog)
+📝 **ブログ（詳細解説）**: https://thunderblog.org/electronic_work/
 
-Raspberry Pi Pico 2Wは、Raspberry Pi財団が提供する低価格で高性能なマイコンボードです。本講座では、MicroPythonを使用して、基礎から実践的なIoTプロジェクトまでを学習します。
+## 👤 こんな方におすすめ
 
-## 🎯 対象者
+- ✓ IoTに興味があるけど何から始めればいいかわからない方
+- ✓ 電子工作を始めてみたい初心者の方
+- ✓ Pythonでハードウェアを動かしてみたい方
+- ✓ センサーデータを活用したシステムを作りたい方
+- ✓ 製造業でDXやIoT導入を検討されている方
 
-- 電子工作やプログラミングに興味がある初心者
-- IoTデバイスの開発を始めたい方
-- MicroPythonを学びたい方
-- Raspberry Pi Pico 2Wの使い方を知りたい方
+## 🎯 シリーズ全体の構成（全12回予定）
 
-## 📋 必要なもの
+### Phase 1: 環境構築（第1-2回）
+開発環境準備、基本のLチカ
+
+### Phase 2: センサー（第3-6回）
+ボタン、LED、各種センサーの使い方
+
+### Phase 3: Wi-Fi・IoT（第7-9回）
+Wi-Fi接続、クラウドへのデータ送信
+
+### Phase 4: データ活用（第10-11回）
+PythonやExcelでのデータ分析
+
+### Phase 5: 実践（第12回）
+シリーズのまとめ、実践プロジェクト
+
+## 🛠 必要な準備物
 
 ### ハードウェア
-- Raspberry Pi Pico 2W
-- USB Type-Cケーブル
-- ブレッドボード
-- ジャンパーワイヤー
-- 各種電子部品（LED、抵抗、センサーなど - レッスンごとに記載）
 
-### ソフトウェア
-- Python 3.7以上
-- Thonny IDE（推奨） - https://thonny.org/
-- その他の必要なツール（requirements.txt参照）
+- ✅ **Raspberry Pi Pico 2W 本体**（ピンヘッダ付き推奨）
+  - ※技適取得済み製品を選んでください
+  - 推奨購入先: KSY、スイッチサイエンス（日本正規代理店）
+  - [スイッチサイエンス（Raspberry Pi Pico 2W ピンヘッダ付き）](https://www.switch-science.com/products/9917)
 
-## 🚀 環境構築
+- ✅ **Groveスターターキット（Raspberry Pi Pico用）**（推奨）
+  - [スイッチサイエンス（Groveスターターキット Raspberry Pi Pico用）](https://www.switch-science.com/products/7248)
 
-### 1. Pythonツールのインストール
+- ✅ **USB A-micro Bケーブル**（データ通信対応）
+  - [USB A - USB micro Bケーブル Amazonベーシック 0.9m](https://amzn.to/4qPY5Pi)
 
-```bash
-pip install -r requirements.txt
-```
+- ✅ **パソコン**（Windows / Mac / Linux）
 
-### 2. Thonny IDEのインストール
+### ソフトウェア（動画で一緒に準備します）
 
-Thonnyは初心者に優しいPython IDEで、MicroPythonの開発に最適です。
+- ✅ Thonny IDE（統合開発環境）
+- ✅ MicroPython（組み込み向けPython実行環境）
 
-- [Thonny公式サイト](https://thonny.org/)からダウンロードしてインストール
+## 💡 おすすめの学習の進め方
 
-### 3. MicroPythonファームウェアのインストール
+1. 動画で全体の概要と流れを理解する
+2. ブログで詳細な手順やコードの意味を確認する
+3. GitHubからコードをダウンロードして試す
+4. 実際に自分の手で回路を組んで動かしてみる
+5. わからないことはコメント欄などで質問する
 
-1. Raspberry Pi Pico 2WのBOOTSELボタンを押しながらUSBケーブルでPCに接続
-2. ドライブとしてマウントされる
-3. [MicroPython公式サイト](https://micropython.org/download/)から最新のファームウェア(.uf2ファイル)をダウンロード
-4. ダウンロードしたファイルをマウントされたドライブにコピー
-5. 自動的に再起動し、MicroPythonが起動
+このサイクルを回すことで、確実にスキルが身につきます！
 
-### 4. Thonnyの設定
+## 📖 学習サポート
 
-1. Thonnyを起動
-2. メニューから「ツール」→「オプション」を選択
-3. 「インタープリタ」タブで「MicroPython (Raspberry Pi Pico)」を選択
-4. ポートを選択（通常は自動検出）
+- 🌐 **ブログ（詳細解説）**: https://thunderblog.org/
+- 💻 **GitHub（サンプルコード）**: https://github.com/Python-Electronics-Thunderblog/raspberrypi-pico2w-iot-course
+- 📧 **質問・お問い合わせ**: YouTubeのコメント欄にご質問ください！
 
-## 📖 レッスン一覧
+## 📌 関連リンク
 
-### Lesson 01: はじめに（環境構築）
-- Raspberry Pi Pico 2Wの概要
-- 開発環境のセットアップ
-- Hello World（LED点灯）
+- [Raspberry Pi公式](https://www.raspberrypi.com/)
+- [スイッチサイエンス](https://www.switch-science.com/)
+- [KSY](https://www.ksyic.com/)
 
-### Lesson 02: セットアップと基本操作
-- MicroPythonの基礎
-- REPL（対話型シェル）の使い方
-- ファイルの転送方法
+## 📺 次回予告
 
-### Lesson 03以降
-（今後追加予定）
+**第2回：開発環境セットアップ＆Lチカ**
 
-## 📁 ディレクトリ構造
+いよいよPico 2Wに命を吹き込みます！
 
-```
-raspberrypi-pico2w-iot-course/
-├── README.md                 # 本ファイル
-├── .gitignore               # Git無視ファイル設定
-├── requirements.txt         # 必要なPCツール
-├── LICENSE                  # ライセンス情報
-├── lesson02_set_up/        # レッスン02のコードと資料
-└── (今後のレッスンフォルダ)
-```
+- ✅ Thonny IDEのインストール
+- ✅ MicroPythonのセットアップ
+- ✅ Lチカの実行（電子工作の第一歩！）
 
-## 🔧 トラブルシューティング
-
-### Raspberry Pi Pico 2Wが認識されない
-- USBケーブルがデータ転送対応か確認
-- 別のUSBポートで試す
-- デバイスドライバが正しくインストールされているか確認
-
-### Thonnyで接続できない
-- 正しいインタープリタとポートが選択されているか確認
-- 他のアプリケーションがポートを使用していないか確認
-- Raspberry Pi Pico 2Wを再接続
-
-## 📝 ライセンス
-
-このプロジェクトはMITライセンスの下で公開されています。詳細は[LICENSE](LICENSE)ファイルをご覧ください。
-
-## 🤝 コントリビューション
-
-プルリクエストや問題の報告を歓迎します。改善提案がある場合は、お気軽にIssueを開いてください。
-
-## 📞 お問い合わせ
-
-質問や提案がある場合は、GitHubのIssueを通じてお問い合わせください。
+次回までに、Pico 2W本体とUSBケーブルを準備しておいてくださいね。
 
 ---
 
-Happy Coding! 🎉
+このシリーズが役に立ったと思ったら、ぜひチャンネル登録と高評価をお願いします！
+一緒に学んで、楽しんでいきましょう！
