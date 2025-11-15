@@ -1,0 +1,16 @@
+# PCツール・ユーティリティ
+# Raspberry Pi Pico 2Wとファイル転送やREPL操作を行うツール
+rshell>=0.0.31
+
+# MicroPython開発環境（オプション）
+# Thonny IDEは別途インストールが必要です
+# https://thonny.org/
+
+# シリアル通信用ツール
+pyserial>=3.5
+
+# MicroPython用のファイル転送ツール（代替）
+adafruit-ampy>=1.1.0
+
+# その他の便利なツール
+esptool>=4.5  # ファームウェア書き込み用（必要に応じて）
