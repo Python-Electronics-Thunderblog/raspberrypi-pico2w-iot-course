@@ -3,7 +3,7 @@
 このシリーズでは、Raspberry Pi Pico 2Wを使ったIoT電子工作を、基礎から実践まで段階的に学んでいきます。
 動画で説明できなかった内容はブログでも解説しています。
 
-📺 **YouTube動画シリーズ**: [こちらから視聴](https://www.youtube.com/@Python-Electronics-Thunderblog)
+📺 **YouTube動画シリーズ**: [こちらから視聴](https://www.youtube.com/watch?v=7xiOEnXxRmg&list=PLzmgBjgy2W0qaQ-KjHZRARttdQnfgmaw_)
 📝 **ブログ（詳細解説）**: https://thunderblog.org/electronic_work/
 
 ## 👤 こんな方におすすめ
