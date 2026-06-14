@@ -18,7 +18,7 @@ LED_OFF = 0  # LED消灯
 
 # ピン設定
 led    = Pin(LED_PIN,    Pin.OUT)              # LED：出力として設定
-switch = Pin(SWITCH_PIN, Pin.IN, Pin.PULL_DOWN) # スイッチ：入力（プルアップ）として設定
+switch = Pin(SWITCH_PIN, Pin.IN)                # スイッチ：入力として設定（Grove Buttonは基板内蔵のプルダウン抵抗を使用）
 
 print("スイッチ入力プログラム開始")
 
