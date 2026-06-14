@@ -38,6 +38,14 @@
 ### Phase 5: 総まとめ編（第12回）
 - 第12回：実践プロジェクト（環境モニタリングシステム完成）
 
+## 📂 サンプルコード一覧
+
+| ファイル | 内容 |
+|---|---|
+| `lesson02_set_up/main.py` | Lチカ（LED点滅）基本プログラム |
+| `lesson03_switch/01_button_led_basic.py` | ボタンを押している間だけLEDを点灯 |
+| `lesson03_switch/02_button_led_advance.py` | ボタンでLED ON/OFF切り替え（debounce・押下カウンター付き） |
+
 ## 🛠 必要な準備物
 
 ### ハードウェア
