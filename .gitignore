@@ -39,6 +39,9 @@ env/
 *.swo
 *~
 
+# MicroPico
+.micropico
+
 # OS
 .DS_Store
 .DS_Store?
