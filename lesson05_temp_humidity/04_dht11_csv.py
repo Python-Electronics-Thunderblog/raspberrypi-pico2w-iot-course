@@ -12,6 +12,7 @@ INTERVAL_SEC = 2   # DHT11 は「1秒に1回まで」
 # Pico 本体のフラッシュに保存する。Thonny の「ファイル」欄から PC へダウンロードできる
 LOG_FILE = "dht11_log.csv"
 # 見出しは英語にする。日本語で書くと、Excel で開いたときに文字化けする
+# （Google スプレッドシートなら日本語でも読めるが、Excel で開く人のために英語にしておく）
 CSV_HEADER = "sec,temp,humidity\n"
 MS_PER_SEC = 1000
 

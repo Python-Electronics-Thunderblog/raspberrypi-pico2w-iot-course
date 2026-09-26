@@ -33,7 +33,7 @@
 
 ### Phase 4: データ分析編（第10-11回）
 - 第10回：Pythonでデータ分析
-- 第11回：Excelでデータ分析
+- 第11回：スプレッドシートでデータ分析
 
 ### Phase 5: 総まとめ編（第12回）
 - 第12回：実践プロジェクト（環境モニタリングシステム完成）
@@ -51,7 +51,7 @@
 | `lesson05_temp_humidity/01_dht11_read.py` | 温湿度センサーDHT11で温度と湿度を1回読み取る |
 | `lesson05_temp_humidity/02_dht11_loop.py` | 2秒ごとに温度と湿度を読み取り続ける |
 | `lesson05_temp_humidity/03_dht11_logger.py` | 読み取りに失敗しても止まらない連続読み取り（try/except） |
-| `lesson05_temp_humidity/04_dht11_csv.py` | 温度と湿度をPico本体にCSVファイルで保存（PCへダウンロードしてExcelで開ける） |
+| `lesson05_temp_humidity/04_dht11_csv.py` | 温度と湿度をPico本体にCSVファイルで保存（PCへダウンロードしてGoogleスプレッドシートで開ける） |
 
 ## 🛠 必要な準備物
 
