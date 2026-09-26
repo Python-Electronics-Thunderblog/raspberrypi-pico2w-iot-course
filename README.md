@@ -45,6 +45,13 @@
 | `lesson02_set_up/main.py` | Lチカ（LED点滅）基本プログラム |
 | `lesson03_switch/01_button_led_basic.py` | ボタンを押している間だけLEDを点灯 |
 | `lesson03_switch/02_button_led_advance.py` | ボタンでLED ON/OFF切り替え（debounce・押下カウンター付き） |
+| `lesson04_light_sensor/01_adc_serial.py` | 照度センサーの値をADCで読み取り、シェルに表示 |
+| `lesson04_light_sensor/02_threshold_led.py` | しきい値で判定し、暗くなったらLEDを点灯 |
+| `lesson04_light_sensor/03_pwm_dimming.py` | 暗さに合わせてLEDの明るさをPWMでなめらかに調光 |
+| `lesson05_temp_humidity/01_dht11_read.py` | 温湿度センサーDHT11で温度と湿度を1回読み取る |
+| `lesson05_temp_humidity/02_dht11_loop.py` | 2秒ごとに温度と湿度を読み取り続ける |
+| `lesson05_temp_humidity/03_dht11_logger.py` | 読み取りに失敗しても止まらない連続読み取り（try/except） |
+| `lesson05_temp_humidity/04_dht11_csv.py` | 温度と湿度をPico本体にCSVファイルで保存（PCへダウンロードしてExcelで開ける） |
 
 ## 🛠 必要な準備物
 
