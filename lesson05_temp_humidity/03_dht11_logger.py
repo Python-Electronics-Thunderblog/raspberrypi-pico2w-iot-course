@@ -8,6 +8,11 @@ DHT11_PIN = 16   # Grove D16 コネクタ
 # ── サンプリング間隔 ─────────────────────────────────────────────────
 INTERVAL_SEC = 2   # DHT11 は「1秒に1回まで」
 
+# ── チェックサム失敗のメッセージ ─────────────────────────────────────
+# MicroPython の dht ドライバは、チェックサムが合わないと
+# OSError ではなく Exception("checksum error") を投げる
+CHECKSUM_ERROR_MSG = "checksum error"
+
 # ── 初期化 ───────────────────────────────────────────────────────────
 sensor = dht.DHT11(Pin(DHT11_PIN))
 
@@ -23,11 +28,16 @@ while True:
         sensor.measure()
         print(f"温度: {sensor.temperature()} ℃  湿度: {sensor.humidity()} %")
     except OSError as e:
-        # 読み取り失敗の主な原因
-        #   ・ケーブルが抜けている / 接触不良 → タイムアウト
-        #   ・40ビットの最後のチェックサムが合わない
-        # except の後ろに OSError と型を書くのが大事。
-        # 何でも受け止める except: は、本当のバグまで飲み込んでしまう
-        print("センサーの読み取りに失敗しました:", e)
+        # センサーから返事が来なかった（タイムアウト）
+        #   ・ケーブルが抜けている / 接触不良
+        print("センサーから応答がありません:", e)
+    except Exception as e:
+        # 40ビットの最後のチェックサムが合わなかった
+        # Exception はほとんどすべてのエラーの親。そのまま受け止めると
+        # 打ち間違いのような本当のバグまで飲み込んでしまうので、
+        # checksum error 以外は raise でそのまま止める
+        if str(e) != CHECKSUM_ERROR_MSG:
+            raise
+        print("データが正しく届きませんでした:", e)
 
     time.sleep(INTERVAL_SEC)

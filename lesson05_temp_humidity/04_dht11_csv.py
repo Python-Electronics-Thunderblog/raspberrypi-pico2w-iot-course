@@ -16,6 +16,11 @@ LOG_FILE = "dht11_log.csv"
 CSV_HEADER = "sec,temp,humidity\n"
 MS_PER_SEC = 1000
 
+# ── チェックサム失敗のメッセージ ─────────────────────────────────────
+# MicroPython の dht ドライバは、チェックサムが合わないと
+# OSError ではなく Exception("checksum error") を投げる
+CHECKSUM_ERROR_MSG = "checksum error"
+
 # ── 初期化 ───────────────────────────────────────────────────────────
 sensor = dht.DHT11(Pin(DHT11_PIN))
 
@@ -49,8 +54,14 @@ while True:
 
         print(f"{elapsed_sec}秒  温度: {temp} ℃  湿度: {humi} %")
     except OSError as e:
-        # センサーの読み取り失敗も、ファイルの書き込み失敗も OSError で届く
+        # センサーのタイムアウトも、ファイルの書き込み失敗も OSError で届く
         # 失敗した回は行を書かずに飛ばし、次の読み取りへ進む
         print("読み取りか保存に失敗しました:", e)
+    except Exception as e:
+        # チェックサムが合わなかった回も、行を書かずに飛ばす
+        # それ以外のエラーは本当のバグなので raise で止める
+        if str(e) != CHECKSUM_ERROR_MSG:
+            raise
+        print("データが正しく届きませんでした:", e)
 
     time.sleep(INTERVAL_SEC)
