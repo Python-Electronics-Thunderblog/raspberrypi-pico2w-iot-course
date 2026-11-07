@@ -52,6 +52,10 @@
 | `lesson05_temp_humidity/02_dht11_loop.py` | 2秒ごとに温度と湿度を読み取り続ける |
 | `lesson05_temp_humidity/03_dht11_logger.py` | 読み取りに失敗しても止まらない連続読み取り（try/except） |
 | `lesson05_temp_humidity/04_dht11_csv.py` | 温度と湿度をPico本体にCSVファイルで保存（PCへダウンロードしてGoogleスプレッドシートで開ける） |
+| `lesson06_lcd_display/grove_lcd.py` | Grove 16x2 LCD 用の自作ドライバ（先にPico本体へ保存して使う） |
+| `lesson06_lcd_display/01_i2c_scan.py` | I2Cスキャンで、つながっている相手のアドレスを調べる |
+| `lesson06_lcd_display/02_lcd_hello.py` | LCDに文字と数字を表示し、最後に画面を消す |
+| `lesson06_lcd_display/03_lcd_dht11.py` | 温湿度センサーDHT11の値を2秒ごとにLCDへ表示 |
 
 ## 🛠 必要な準備物
 
