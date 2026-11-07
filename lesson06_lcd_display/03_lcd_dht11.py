@@ -17,6 +17,11 @@ DHT11_PIN = 16       # Grove D16 コネクタ（第5回と同じ）
 # ── サンプリング間隔 ─────────────────────────────────────────────────
 INTERVAL_SEC = 2     # DHT11 は「1秒に1回まで」
 
+# ── チェックサム失敗のメッセージ ─────────────────────────────────────
+# MicroPython の dht ドライバは、チェックサムが合わないと
+# OSError ではなく Exception("checksum error") を投げる
+CHECKSUM_ERROR_MSG = "checksum error"
+
 # ── 初期化 ───────────────────────────────────────────────────────────
 i2c = I2C(I2C_ID, scl=Pin(SCL_PIN), sda=Pin(SDA_PIN), freq=I2C_FREQ)
 lcd = GroveLCD(i2c)
@@ -41,4 +46,13 @@ while True:
         lcd.write_line(0, "Error")
         lcd.write_line(1, "")
         print("センサーの読み取りに失敗しました:", e)
+    except Exception as e:
+        # 40ビットの最後のチェックサムが合わなかった
+        # それ以外のエラーは本当のバグなので raise でそのまま止める（第5回と同じ）
+        if str(e) != CHECKSUM_ERROR_MSG:
+            raise
+        lcd.write_line(0, "Error")
+        lcd.write_line(1, "")
+        print("データが正しく届きませんでした:", e)
+
     time.sleep(INTERVAL_SEC)
